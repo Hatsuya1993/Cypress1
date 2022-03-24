@@ -10,6 +10,9 @@ describe('Home Page Test', () => {
         homePagePom = new HomePagePOM_1.default();
         homePagePom.navigateTo();
     });
+    it('URL should contain angularpractice', () => {
+        cy.url().should('contain', 'angularpractice');
+    });
     it('Navbar should be displayed', () => {
         homePagePom.getNavBar().should("be.visible");
     });
