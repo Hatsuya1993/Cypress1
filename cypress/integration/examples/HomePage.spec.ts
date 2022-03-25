@@ -17,4 +17,8 @@ describe('Home Page Test', () => {
         homePagePom.getNavBar().should("be.visible")
     })
 
+    it('ProtoCommerce in navbar should be dispalyed', () => {
+        homePagePom.getProtoCommerce().should("be.visible")
+    })
+
  })
