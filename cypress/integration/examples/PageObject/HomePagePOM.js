@@ -8,6 +8,10 @@ class HomePagePOM {
             class: ".navbar-brand",
             text: "ProtoCommerce"
         };
+        this.home = {
+            class: "[href='/angularpractice']",
+            text: "Home"
+        };
     }
     navigateTo() {
         cy.visit(this.link);
@@ -17,6 +21,9 @@ class HomePagePOM {
     }
     getProtoCommerce() {
         return cy.get(this.protoCommerce.class).contains(this.protoCommerce.text);
+    }
+    getHome() {
+        return cy.get(this.home.class).contains(this.home.text);
     }
 }
 exports.default = HomePagePOM;

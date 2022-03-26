@@ -19,4 +19,7 @@ describe('Home Page Test', () => {
     it('ProtoCommerce in navbar should be dispalyed', () => {
         homePagePom.getProtoCommerce().should("be.visible");
     });
+    it('Home in navbar should be dispalyed', () => {
+        homePagePom.getHome().should("be.visible");
+    });
 });
