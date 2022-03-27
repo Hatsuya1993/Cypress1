@@ -22,4 +22,7 @@ describe('Home Page Test', () => {
     it('Home in navbar should be dispalyed', () => {
         homePagePom.getShop().should("be.visible");
     });
+    it('Jumbotron should be dispalyed', () => {
+        homePagePom.getJumbotron().should("be.visible");
+    });
 });

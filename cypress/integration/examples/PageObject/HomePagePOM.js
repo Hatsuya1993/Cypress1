@@ -12,6 +12,7 @@ class HomePagePOM {
             class: "[href='/angularpractice']",
             text: "Home"
         };
+        this.jumbotron = ".jumbotron";
         this.shop = {
             class: "[href='/angularpractice/shop']",
             text: "Shop"
@@ -31,6 +32,9 @@ class HomePagePOM {
     }
     getShop() {
         return cy.get(this.shop.class).contains(this.shop.text);
+    }
+    getJumbotron() {
+        return cy.get(this.jumbotron);
     }
 }
 exports.default = HomePagePOM;

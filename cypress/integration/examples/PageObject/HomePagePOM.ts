@@ -15,6 +15,7 @@ class HomePagePOM{
         class: "[href='/angularpractice']",
         text: "Home"
     }
+    private readonly jumbotron : string = ".jumbotron"
 
     private readonly shop : linkText = {
         class: "[href='/angularpractice/shop']",
@@ -39,6 +40,10 @@ class HomePagePOM{
 
     getShop() {
         return cy.get(this.shop.class).contains(this.shop.text)
+    }
+
+    getJumbotron() {
+        return cy.get(this.jumbotron)
     }
 
 }

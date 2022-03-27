@@ -25,4 +25,8 @@ describe('Home Page Test', () => {
         homePagePom.getShop().should("be.visible")
     })
 
+    it('Jumbotron should be dispalyed', () => {
+        homePagePom.getJumbotron().should("be.visible")
+    })
+
  })
