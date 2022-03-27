@@ -16,6 +16,11 @@ class HomePagePOM{
         text: "Home"
     }
 
+    private readonly shop : linkText = {
+        class: "[href='/angularpractice/shop']",
+        text: "Shop"
+    }
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -30,6 +35,10 @@ class HomePagePOM{
 
     getHome() {
         return cy.get(this.home.class).contains(this.home.text)
+    }
+
+    getShop() {
+        return cy.get(this.shop.class).contains(this.shop.text)
     }
 
 }
