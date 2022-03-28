@@ -17,6 +17,7 @@ class HomePagePOM {
             class: "[href='/angularpractice/shop']",
             text: "Shop"
         };
+        this.name = "[name='name']";
     }
     navigateTo() {
         cy.visit(this.link);
@@ -35,6 +36,9 @@ class HomePagePOM {
     }
     getJumbotron() {
         return cy.get(this.jumbotron);
+    }
+    getName() {
+        return cy.get(this.name);
     }
 }
 exports.default = HomePagePOM;

@@ -3,6 +3,11 @@ interface linkText {
     text: string
 }
 
+interface attributeName {
+    attribute : string,
+    text : string
+}
+
 class HomePagePOM{
 
     private readonly link: string = "https://rahulshettyacademy.com/angularpractice/"
@@ -21,6 +26,8 @@ class HomePagePOM{
         class: "[href='/angularpractice/shop']",
         text: "Shop"
     }
+
+    private readonly name: string = "[name='name']"
 
     navigateTo() {
         cy.visit(this.link)
@@ -44,6 +51,10 @@ class HomePagePOM{
 
     getJumbotron() {
         return cy.get(this.jumbotron)
+    }
+
+    getName() {
+        return cy.get(this.name)
     }
 
 }

@@ -29,4 +29,8 @@ describe('Home Page Test', () => {
         homePagePom.getJumbotron().should("be.visible")
     })
 
+    it('Name should be displayed', () => {
+        homePagePom.getName().should("be.visible")
+    })
+
  })
