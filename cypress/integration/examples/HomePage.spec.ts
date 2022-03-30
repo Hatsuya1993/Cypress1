@@ -33,4 +33,7 @@ describe('Home Page Test', () => {
         homePagePom.getName().should("be.visible")
     })
 
+    it('Name text should be displayed', () => {
+        homePagePom.getNameText().should("be.visible")
+    })
  })

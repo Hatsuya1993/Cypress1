@@ -29,6 +29,11 @@ class HomePagePOM{
 
     private readonly name: string = "[name='name']"
 
+    private readonly nameText: linkText = {
+        class: "label",
+        text: "Name"
+    }
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -55,6 +60,10 @@ class HomePagePOM{
 
     getName() {
         return cy.get(this.name)
+    }
+
+    getNameText() {
+        return cy.contains(this.nameText.class, this.nameText.text)
     }
 
 }

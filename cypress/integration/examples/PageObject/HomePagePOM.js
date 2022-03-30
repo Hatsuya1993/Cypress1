@@ -18,6 +18,10 @@ class HomePagePOM {
             text: "Shop"
         };
         this.name = "[name='name']";
+        this.nameText = {
+            class: "label",
+            text: "Name"
+        };
     }
     navigateTo() {
         cy.visit(this.link);
@@ -39,6 +43,9 @@ class HomePagePOM {
     }
     getName() {
         return cy.get(this.name);
+    }
+    getNameText() {
+        return cy.contains(this.nameText.class, this.nameText.text);
     }
 }
 exports.default = HomePagePOM;
