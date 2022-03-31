@@ -31,4 +31,7 @@ describe('Home Page Test', () => {
     it('Name text should be displayed', () => {
         homePagePom.getNameText().should("be.visible");
     });
+    it('Email should be displayed', () => {
+        homePagePom.getEmail().should("be.visible");
+    });
 });
