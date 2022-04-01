@@ -36,6 +36,11 @@ class HomePagePOM{
 
     private readonly email : string = '[name="email"]'
 
+    private readonly emailText: linkText = {
+        class: "label",
+        text: "Email"
+    }
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -70,6 +75,10 @@ class HomePagePOM{
 
     getEmail() {
         return cy.get(this.email)
+    }
+
+    getEmailText() {
+        return cy.contains(this.emailText.class, this.emailText.text)
     }
 
 }

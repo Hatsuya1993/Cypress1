@@ -23,6 +23,10 @@ class HomePagePOM {
             text: "Name"
         };
         this.email = '[name="email"]';
+        this.emailText = {
+            class: "label",
+            text: "Email"
+        };
     }
     navigateTo() {
         cy.visit(this.link);
@@ -50,6 +54,9 @@ class HomePagePOM {
     }
     getEmail() {
         return cy.get(this.email);
+    }
+    getEmailText() {
+        return cy.contains(this.emailText.class, this.emailText.text);
     }
 }
 exports.default = HomePagePOM;

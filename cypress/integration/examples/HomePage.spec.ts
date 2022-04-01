@@ -40,4 +40,8 @@ describe('Home Page Test', () => {
     it('Email should be displayed', () => {
         homePagePom.getEmail().should("be.visible")
     })
+
+    it('Email text should be displayed', () => {
+        homePagePom.getEmailText().should("be.visible")
+    })
  })
