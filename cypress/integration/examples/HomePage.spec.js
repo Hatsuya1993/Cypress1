@@ -37,4 +37,7 @@ describe('Home Page Test', () => {
     it('Email text should be displayed', () => {
         homePagePom.getEmailText().should("be.visible");
     });
+    it('Password should be displayed', () => {
+        homePagePom.getPassword().should("be.visible");
+    });
 });

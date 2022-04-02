@@ -3,11 +3,6 @@ interface linkText {
     text: string
 }
 
-interface attributeName {
-    attribute : string,
-    text : string
-}
-
 class HomePagePOM{
 
     private readonly link: string = "https://rahulshettyacademy.com/angularpractice/"
@@ -40,6 +35,8 @@ class HomePagePOM{
         class: "label",
         text: "Email"
     }
+
+    private readonly password : string = '[placeholder="Password"]'
 
     navigateTo() {
         cy.visit(this.link)
@@ -79,6 +76,10 @@ class HomePagePOM{
 
     getEmailText() {
         return cy.contains(this.emailText.class, this.emailText.text)
+    }
+
+    getPassword() {
+        return cy.get(this.password)
     }
 
 }

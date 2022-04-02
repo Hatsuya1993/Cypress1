@@ -27,6 +27,7 @@ class HomePagePOM {
             class: "label",
             text: "Email"
         };
+        this.password = '[placeholder="Password"]';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -57,6 +58,9 @@ class HomePagePOM {
     }
     getEmailText() {
         return cy.contains(this.emailText.class, this.emailText.text);
+    }
+    getPassword() {
+        return cy.get(this.password);
     }
 }
 exports.default = HomePagePOM;
