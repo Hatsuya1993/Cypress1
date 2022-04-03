@@ -48,4 +48,8 @@ describe('Home Page Test', () => {
     it('Password should be displayed', () => {
         homePagePom.getPassword().should("be.visible")
     })
+
+    it('Password text should be displayed', () => {
+        homePagePom.getPasswordText().should("be.visible")
+    })
  })
