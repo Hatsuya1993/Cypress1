@@ -56,4 +56,8 @@ describe('Home Page Test', () => {
     it('Checkbox is displayed', () => {
         homePagePom.getCheckBox().should("be.visible")
     })
+
+    it('Checkbox text is displayed', () => {
+        homePagePom.getCheckBoxText().should("be.visible")
+    })
  })
