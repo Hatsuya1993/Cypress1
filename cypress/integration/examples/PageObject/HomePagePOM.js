@@ -32,6 +32,7 @@ class HomePagePOM {
             class: "label",
             text: "Password"
         };
+        this.checkBox = '.form-check-input#exampleCheck1';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -68,6 +69,9 @@ class HomePagePOM {
     }
     getPasswordText() {
         return cy.contains(this.passwordText.class, this.passwordText.text);
+    }
+    getCheckBox() {
+        return cy.get(this.checkBox);
     }
 }
 exports.default = HomePagePOM;

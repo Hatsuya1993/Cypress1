@@ -43,4 +43,7 @@ describe('Home Page Test', () => {
     it('Password text should be displayed', () => {
         homePagePom.getPasswordText().should("be.visible");
     });
+    it('Checkbox is displayed', () => {
+        homePagePom.getCheckBox().should("be.visible");
+    });
 });

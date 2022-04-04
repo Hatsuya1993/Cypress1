@@ -43,6 +43,8 @@ class HomePagePOM{
         text: "Password"
     }
 
+    private readonly checkBox : string = '.form-check-input#exampleCheck1'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -89,6 +91,10 @@ class HomePagePOM{
 
     getPasswordText() {
         return cy.contains(this.passwordText.class, this.passwordText.text)
+    }
+
+    getCheckBox() {
+        return cy.get(this.checkBox)
     }
 
 }
