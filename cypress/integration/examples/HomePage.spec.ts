@@ -60,4 +60,8 @@ describe('Home Page Test', () => {
     it('Checkbox text is displayed', () => {
         homePagePom.getCheckBoxText().should("be.visible")
     })
+
+    it('Gender text is displayed', () => {
+        homePagePom.getGenderText().should("be.visible")
+    })
  })

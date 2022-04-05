@@ -37,6 +37,10 @@ class HomePagePOM {
             class: "label",
             text: "Check me out if you Love IceCreams!"
         };
+        this.genderText = {
+            class: "label",
+            text: "Gender"
+        };
     }
     navigateTo() {
         cy.visit(this.link);
@@ -79,6 +83,9 @@ class HomePagePOM {
     }
     getCheckBoxText() {
         return cy.contains(this.checkBoxText.class, this.checkBoxText.text);
+    }
+    getGenderText() {
+        return cy.contains(this.genderText.class, this.genderText.text);
     }
 }
 exports.default = HomePagePOM;
