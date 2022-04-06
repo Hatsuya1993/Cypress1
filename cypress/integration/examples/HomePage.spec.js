@@ -52,4 +52,7 @@ describe('Home Page Test', () => {
     it('Gender text is displayed', () => {
         homePagePom.getGenderText().should("be.visible");
     });
+    it('Gender is displayed', () => {
+        homePagePom.getGender().should("be.visible");
+    });
 });

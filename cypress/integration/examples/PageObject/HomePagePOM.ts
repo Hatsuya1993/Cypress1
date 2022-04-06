@@ -55,6 +55,9 @@ class HomePagePOM{
         text: "Gender"
     }
 
+    private readonly gender : string = '#exampleFormControlSelect1'
+
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -113,6 +116,10 @@ class HomePagePOM{
 
     getGenderText() {
         return cy.contains(this.genderText.class, this.genderText.text)
+    }
+
+    getGender() {
+        return cy.get(this.gender)
     }
 
 }

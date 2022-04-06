@@ -41,6 +41,7 @@ class HomePagePOM {
             class: "label",
             text: "Gender"
         };
+        this.gender = '#exampleFormControlSelect1';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -86,6 +87,9 @@ class HomePagePOM {
     }
     getGenderText() {
         return cy.contains(this.genderText.class, this.genderText.text);
+    }
+    getGender() {
+        return cy.get(this.gender);
     }
 }
 exports.default = HomePagePOM;
