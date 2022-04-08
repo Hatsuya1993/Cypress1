@@ -68,4 +68,8 @@ describe('Home Page Test', () => {
     it('Gender is displayed', () => {
         homePagePom.getGender().should("be.visible")
     })
+
+    it('Employment status is displayed', () => {
+        homePagePom.getEmploymentStatus().should("be.visible")
+    })
  })

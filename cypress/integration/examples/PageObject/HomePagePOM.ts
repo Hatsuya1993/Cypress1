@@ -57,6 +57,8 @@ class HomePagePOM{
 
     private readonly gender : string = '#exampleFormControlSelect1'
 
+    private readonly employmentStatus : string = '[for="exampleFormControlRadio1"]'
+
 
     navigateTo() {
         cy.visit(this.link)
@@ -120,6 +122,10 @@ class HomePagePOM{
 
     getGender() {
         return cy.get(this.gender)
+    }
+
+    getEmploymentStatus() {
+        return cy.get(this.employmentStatus)
     }
 
 }

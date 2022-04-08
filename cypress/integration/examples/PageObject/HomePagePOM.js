@@ -42,6 +42,7 @@ class HomePagePOM {
             text: "Gender"
         };
         this.gender = '#exampleFormControlSelect1';
+        this.employmentStatus = '[for="exampleFormControlRadio1"]';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -90,6 +91,9 @@ class HomePagePOM {
     }
     getGender() {
         return cy.get(this.gender);
+    }
+    getEmploymentStatus() {
+        return cy.get(this.employmentStatus);
     }
 }
 exports.default = HomePagePOM;
