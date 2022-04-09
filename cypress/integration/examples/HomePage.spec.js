@@ -58,4 +58,7 @@ describe('Home Page Test', () => {
     it('Employment status is displayed', () => {
         homePagePom.getEmploymentStatus().should("be.visible");
     });
+    it('Student checkbox is displayed', () => {
+        homePagePom.getStudentCheckBox().should("be.visible");
+    });
 });

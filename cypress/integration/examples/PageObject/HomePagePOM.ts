@@ -59,6 +59,8 @@ class HomePagePOM{
 
     private readonly employmentStatus : string = '[for="exampleFormControlRadio1"]'
 
+    private readonly studentCheckBox : string = '#inlineRadio1'
+
 
     navigateTo() {
         cy.visit(this.link)
@@ -126,6 +128,10 @@ class HomePagePOM{
 
     getEmploymentStatus() {
         return cy.get(this.employmentStatus)
+    }
+
+    getStudentCheckBox() {
+        return cy.get(this.studentCheckBox)
     }
 
 }

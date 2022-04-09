@@ -43,6 +43,7 @@ class HomePagePOM {
         };
         this.gender = '#exampleFormControlSelect1';
         this.employmentStatus = '[for="exampleFormControlRadio1"]';
+        this.studentCheckBox = '#inlineRadio1';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -94,6 +95,9 @@ class HomePagePOM {
     }
     getEmploymentStatus() {
         return cy.get(this.employmentStatus);
+    }
+    getStudentCheckBox() {
+        return cy.get(this.studentCheckBox);
     }
 }
 exports.default = HomePagePOM;
