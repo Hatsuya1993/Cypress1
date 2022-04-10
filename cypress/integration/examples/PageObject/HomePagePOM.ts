@@ -61,6 +61,8 @@ class HomePagePOM{
 
     private readonly studentCheckBox : string = '#inlineRadio1'
 
+    private readonly studentText : string = '[for="inlineRadio1"]'
+
 
     navigateTo() {
         cy.visit(this.link)
@@ -132,6 +134,10 @@ class HomePagePOM{
 
     getStudentCheckBox() {
         return cy.get(this.studentCheckBox)
+    }
+
+    getStudentText() {
+        return cy.get(this.studentText)
     }
 
 }

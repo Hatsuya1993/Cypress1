@@ -61,4 +61,7 @@ describe('Home Page Test', () => {
     it('Student checkbox is displayed', () => {
         homePagePom.getStudentCheckBox().should("be.visible");
     });
+    it('Student text is displayed', () => {
+        homePagePom.getStudentText().should("be.visible");
+    });
 });
