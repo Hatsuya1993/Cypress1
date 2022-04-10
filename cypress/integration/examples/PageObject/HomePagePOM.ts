@@ -5,7 +5,7 @@ interface linkText {
 
 class HomePagePOM{
 
-    private readonly link: string = "https://rahulshettyacademy.com/angularpractice/"
+    private readonly link: string = "/"
     private readonly navbar: string = ".navbar"
     private readonly protoCommerce : linkText = {
         class: ".navbar-brand",
@@ -62,6 +62,8 @@ class HomePagePOM{
     private readonly studentCheckBox : string = '#inlineRadio1'
 
     private readonly studentText : string = '[for="inlineRadio1"]'
+
+    private readonly employedCheckBox : string = '#inlineRadio2'
 
 
     navigateTo() {
@@ -138,6 +140,10 @@ class HomePagePOM{
 
     getStudentText() {
         return cy.get(this.studentText)
+    }
+
+    getEmployedCheckBox() {
+        return cy.get(this.employedCheckBox)
     }
 
 }

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class HomePagePOM {
     constructor() {
-        this.link = "https://rahulshettyacademy.com/angularpractice/";
+        this.link = "/";
         this.navbar = ".navbar";
         this.protoCommerce = {
             class: ".navbar-brand",
@@ -45,6 +45,7 @@ class HomePagePOM {
         this.employmentStatus = '[for="exampleFormControlRadio1"]';
         this.studentCheckBox = '#inlineRadio1';
         this.studentText = '[for="inlineRadio1"]';
+        this.employedCheckBox = '#inlineRadio2';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -102,6 +103,9 @@ class HomePagePOM {
     }
     getStudentText() {
         return cy.get(this.studentText);
+    }
+    getEmployedCheckBox() {
+        return cy.get(this.employedCheckBox);
     }
 }
 exports.default = HomePagePOM;
