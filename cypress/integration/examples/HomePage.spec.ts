@@ -84,4 +84,8 @@ describe('Home Page Test', () => {
     it('Employed checkbox is displayed', () => {
         homePagePom.getEmployedCheckBox().should("be.visible")
     })
+
+    it('Employed text is displayed', () => {
+        homePagePom.getEmployedText().should("be.visible")
+    })
  })
