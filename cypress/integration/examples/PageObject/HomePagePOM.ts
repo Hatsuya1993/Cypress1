@@ -67,6 +67,8 @@ class HomePagePOM{
 
     private readonly employedText : string = '[for="inlineRadio2"]'
 
+    private readonly entrepreneurCheckBox : string = '#inlineRadio3'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -149,6 +151,10 @@ class HomePagePOM{
 
     getEmployedText() {
         return cy.get(this.employedText)
+    }
+
+    getEntrepreneurCheckBox() {
+        return cy.get(this.entrepreneurCheckBox)
     }
 
 }

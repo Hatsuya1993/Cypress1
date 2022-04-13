@@ -47,6 +47,7 @@ class HomePagePOM {
         this.studentText = '[for="inlineRadio1"]';
         this.employedCheckBox = '#inlineRadio2';
         this.employedText = '[for="inlineRadio2"]';
+        this.entrepreneurCheckBox = '#inlineRadio3';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -110,6 +111,9 @@ class HomePagePOM {
     }
     getEmployedText() {
         return cy.get(this.employedText);
+    }
+    getEntrepreneurCheckBox() {
+        return cy.get(this.entrepreneurCheckBox);
     }
 }
 exports.default = HomePagePOM;
