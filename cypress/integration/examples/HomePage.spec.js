@@ -73,4 +73,7 @@ describe('Home Page Test', () => {
     it('Entrepreneur checkbox is displayed', () => {
         homePagePom.getEntrepreneurCheckBox().should("be.visible");
     });
+    it('Entrepreneur text is displayed', () => {
+        homePagePom.getEntrepreneurText().should("be.visible");
+    });
 });
