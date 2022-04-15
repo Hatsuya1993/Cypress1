@@ -96,4 +96,8 @@ describe('Home Page Test', () => {
     it('Entrepreneur text is displayed', () => {
         homePagePom.getEntrepreneurText().should("be.visible")
     })
+
+    it('Date of birth text should be displayed', () => {
+        homePagePom.getDateOfBirthText().should("be.visible")
+    })
  })

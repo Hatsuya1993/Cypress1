@@ -71,6 +71,8 @@ class HomePagePOM{
 
     private readonly entrepreneurText : string = '[for="inlineRadio3"]'
 
+    private readonly dateOfBirthText : string = '[for="dateofBirth"]'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -161,6 +163,10 @@ class HomePagePOM{
 
     getEntrepreneurText() {
         return cy.get(this.entrepreneurText)
+    }
+
+    getDateOfBirthText() {
+        return cy.get(this.dateOfBirthText)
     }
 
 }
