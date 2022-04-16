@@ -79,4 +79,7 @@ describe('Home Page Test', () => {
     it('Date of birth text should be displayed', () => {
         homePagePom.getDateOfBirthText().should("be.visible");
     });
+    it('Date of birth should be displayed', () => {
+        homePagePom.getDateOfBirth().should("be.visible");
+    });
 });

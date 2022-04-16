@@ -50,6 +50,7 @@ class HomePagePOM {
         this.entrepreneurCheckBox = '#inlineRadio3';
         this.entrepreneurText = '[for="inlineRadio3"]';
         this.dateOfBirthText = '[for="dateofBirth"]';
+        this.dateOfBirth = '[name="bday"]';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -122,6 +123,9 @@ class HomePagePOM {
     }
     getDateOfBirthText() {
         return cy.get(this.dateOfBirthText);
+    }
+    getDateOfBirth() {
+        return cy.get(this.dateOfBirth);
     }
 }
 exports.default = HomePagePOM;

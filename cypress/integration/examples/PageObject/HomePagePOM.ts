@@ -73,6 +73,8 @@ class HomePagePOM{
 
     private readonly dateOfBirthText : string = '[for="dateofBirth"]'
 
+    private readonly dateOfBirth : string = '[name="bday"]'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -167,6 +169,10 @@ class HomePagePOM{
 
     getDateOfBirthText() {
         return cy.get(this.dateOfBirthText)
+    }
+
+    getDateOfBirth() {
+        return cy.get(this.dateOfBirth)
     }
 
 }
