@@ -51,6 +51,7 @@ class HomePagePOM {
         this.entrepreneurText = '[for="inlineRadio3"]';
         this.dateOfBirthText = '[for="dateofBirth"]';
         this.dateOfBirth = '[name="bday"]';
+        this.submitButton = '[type="submit"]';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -126,6 +127,9 @@ class HomePagePOM {
     }
     getDateOfBirth() {
         return cy.get(this.dateOfBirth);
+    }
+    getSubmitButton() {
+        return cy.get(this.submitButton);
     }
 }
 exports.default = HomePagePOM;

@@ -104,4 +104,8 @@ describe('Home Page Test', () => {
     it('Date of birth should be displayed', () => {
         homePagePom.getDateOfBirth().should("be.visible")
     })
+
+    it('Submit button should be displayed', () => {
+        homePagePom.getSubmitButton().should("be.visible")
+    })
  })

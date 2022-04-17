@@ -75,6 +75,8 @@ class HomePagePOM{
 
     private readonly dateOfBirth : string = '[name="bday"]'
 
+    private readonly submitButton : string = '[type="submit"]'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -173,6 +175,10 @@ class HomePagePOM{
 
     getDateOfBirth() {
         return cy.get(this.dateOfBirth)
+    }
+
+    getSubmitButton() {
+        return cy.get(this.submitButton)
     }
 
 }
