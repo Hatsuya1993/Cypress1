@@ -77,6 +77,8 @@ class HomePagePOM{
 
     private readonly submitButton : string = '[type="submit"]'
 
+    private readonly twoWayBinding : string = 'h4 input[name="name"]'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -179,6 +181,10 @@ class HomePagePOM{
 
     getSubmitButton() {
         return cy.get(this.submitButton)
+    }
+
+    getTwoWayBinding() {
+        return cy.get(this.twoWayBinding)
     }
 
 }

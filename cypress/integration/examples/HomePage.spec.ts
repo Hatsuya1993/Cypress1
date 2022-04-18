@@ -108,4 +108,8 @@ describe('Home Page Test', () => {
     it('Submit button should be displayed', () => {
         homePagePom.getSubmitButton().should("be.visible")
     })
+
+    it('Two way binding input should be displayed', () => {
+        homePagePom.getTwoWayBinding().should("be.visible")
+    })
  })
