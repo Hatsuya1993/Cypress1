@@ -112,4 +112,8 @@ describe('Home Page Test', () => {
     it('Two way binding input should be displayed', () => {
         homePagePom.getTwoWayBinding().should("be.visible")
     })
+
+    it('Banner should be displayed', () => {
+        homePagePom.getBanner().should("be.visible")
+    })
  })

@@ -53,6 +53,7 @@ class HomePagePOM {
         this.dateOfBirth = '[name="bday"]';
         this.submitButton = '[type="submit"]';
         this.twoWayBinding = 'h4 input[name="name"]';
+        this.bottom = '.m-0.text-center.text-white';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -134,6 +135,9 @@ class HomePagePOM {
     }
     getTwoWayBinding() {
         return cy.get(this.twoWayBinding);
+    }
+    getBanner() {
+        return cy.get(this.bottom);
     }
 }
 exports.default = HomePagePOM;

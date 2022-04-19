@@ -79,6 +79,8 @@ class HomePagePOM{
 
     private readonly twoWayBinding : string = 'h4 input[name="name"]'
 
+    private readonly bottom : string = '.m-0.text-center.text-white'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -185,6 +187,10 @@ class HomePagePOM{
 
     getTwoWayBinding() {
         return cy.get(this.twoWayBinding)
+    }
+
+    getBanner() {
+        return cy.get(this.bottom)
     }
 
 }
