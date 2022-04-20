@@ -2,8 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const constants = [
     {
-        "homePage": {
+        "homePageName": {
             "data": "name",
+            "name": "test"
+        },
+        "homePageEmail": {
+            "data": "email",
             "name": "test"
         }
     }

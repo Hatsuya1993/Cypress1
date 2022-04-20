@@ -96,7 +96,11 @@ describe('Home Page Test', () => {
         homePagePom.getBanner().should("be.visible");
     });
     it('Input name should be displayed when data added', () => {
-        helper.inputText(Constants_1.default[0].homePage.data, Constants_1.default[0].homePage.name);
-        homePagePom.getName().should("have.value", Constants_1.default[0].homePage.name);
+        helper.inputText(Constants_1.default[0].homePageName.data, Constants_1.default[0].homePageName.name);
+        homePagePom.getName().should("have.value", Constants_1.default[0].homePageName.name);
+    });
+    it('Input email should be displayed when data added', () => {
+        helper.inputText(Constants_1.default[0].homePageEmail.data, Constants_1.default[0].homePageEmail.name);
+        homePagePom.getEmail().should("have.value", Constants_1.default[0].homePageEmail.name);
     });
 });

@@ -1,7 +1,11 @@
 const constants = [
     {
-        "homePage": {
+        "homePageName": {
             "data" : "name",
+            "name" : "test"
+        },
+        "homePageEmail": {
+            "data" : "email",
             "name" : "test"
         }
     }

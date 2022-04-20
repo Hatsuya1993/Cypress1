@@ -13,6 +13,9 @@ class Helper {
             case "name":
                 this.homePagePom.getName().type(value);
                 break;
+            case "email":
+                this.homePagePom.getEmail().type(value);
+                break;
             default:
                 throw new Error("There is no such data");
         }

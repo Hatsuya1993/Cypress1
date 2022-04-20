@@ -122,7 +122,12 @@ describe('Home Page Test', () => {
     })
 
     it('Input name should be displayed when data added', () => {
-        helper.inputText(Constants[0].homePage.data, Constants[0].homePage.name)
-        homePagePom.getName().should("have.value",Constants[0].homePage.name)
+        helper.inputText(Constants[0].homePageName.data, Constants[0].homePageName.name)
+        homePagePom.getName().should("have.value",Constants[0].homePageName.name)
+    })
+    
+    it('Input email should be displayed when data added', () => {
+        helper.inputText(Constants[0].homePageEmail.data, Constants[0].homePageEmail.name)
+        homePagePom.getEmail().should("have.value",Constants[0].homePageEmail.name)
     })
  })
