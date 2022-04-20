@@ -17,7 +17,7 @@ class HomePagePOM {
             class: "[href='/angularpractice/shop']",
             text: "Shop"
         };
-        this.name = "[name='name']";
+        this.name = ".form-group [name='name']";
         this.nameText = {
             class: "label",
             text: "Name"

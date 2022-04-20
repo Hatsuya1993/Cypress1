@@ -4,10 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const HomePagePOM_1 = __importDefault(require("./PageObject/HomePagePOM"));
+const Helper_1 = __importDefault(require("./Helper/Helper"));
+const Constants_1 = __importDefault(require("./Constants/Constants"));
 describe('Home Page Test', () => {
     let homePagePom;
+    let helper;
     beforeEach(() => {
         homePagePom = new HomePagePOM_1.default();
+        helper = new Helper_1.default();
         homePagePom.navigateTo();
     });
     it('URL should contain angularpractice', () => {
@@ -90,5 +94,9 @@ describe('Home Page Test', () => {
     });
     it('Banner should be displayed', () => {
         homePagePom.getBanner().should("be.visible");
+    });
+    it('Input name should be displayed when data added', () => {
+        helper.inputText(Constants_1.default[0].homePage.data, Constants_1.default[0].homePage.name);
+        homePagePom.getName().should("have.value", Constants_1.default[0].homePage.name);
     });
 });

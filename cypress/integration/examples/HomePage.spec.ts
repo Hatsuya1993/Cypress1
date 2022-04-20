@@ -1,11 +1,15 @@
 import HomePagePOM from './PageObject/HomePagePOM'
+import Helper from './Helper/Helper'
+import Constants from './Constants/Constants'
 
 describe('Home Page Test', () => { 
     
     let homePagePom: HomePagePOM
+    let helper: Helper
 
     beforeEach(() => {
         homePagePom = new HomePagePOM()
+        helper = new Helper()
         homePagePom.navigateTo()
     })
 
@@ -115,5 +119,10 @@ describe('Home Page Test', () => {
 
     it('Banner should be displayed', () => {
         homePagePom.getBanner().should("be.visible")
+    })
+
+    it('Input name should be displayed when data added', () => {
+        helper.inputText(Constants[0].homePage.data, Constants[0].homePage.name)
+        homePagePom.getName().should("have.value",Constants[0].homePage.name)
     })
  })

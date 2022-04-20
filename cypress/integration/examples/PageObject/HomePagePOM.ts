@@ -22,7 +22,7 @@ class HomePagePOM{
         text: "Shop"
     }
 
-    private readonly name: string = "[name='name']"
+    private readonly name: string = ".form-group [name='name']"
 
     private readonly nameText: linkText = {
         class: "label",
