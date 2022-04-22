@@ -7,6 +7,10 @@ const constants = [
         "homePageEmail": {
             "data" : "email",
             "name" : "test"
+        },
+        "homePagePassword": {
+            "data" : "password",
+            "name" : "test"
         }
     }
 ]

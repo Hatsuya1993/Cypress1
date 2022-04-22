@@ -103,4 +103,8 @@ describe('Home Page Test', () => {
         helper.inputText(Constants_1.default[0].homePageEmail.data, Constants_1.default[0].homePageEmail.name);
         homePagePom.getEmail().should("have.value", Constants_1.default[0].homePageEmail.name);
     });
+    it('Input password should be displayed when data added', () => {
+        helper.inputText(Constants_1.default[0].homePagePassword.data, Constants_1.default[0].homePagePassword.name);
+        homePagePom.getPassword().should("have.value", Constants_1.default[0].homePagePassword.name);
+    });
 });

@@ -130,4 +130,9 @@ describe('Home Page Test', () => {
         helper.inputText(Constants[0].homePageEmail.data, Constants[0].homePageEmail.name)
         homePagePom.getEmail().should("have.value",Constants[0].homePageEmail.name)
     })
+
+    it('Input password should be displayed when data added', () => {
+        helper.inputText(Constants[0].homePagePassword.data, Constants[0].homePagePassword.name)
+        homePagePom.getPassword().should("have.value",Constants[0].homePagePassword.name)
+    })
  })

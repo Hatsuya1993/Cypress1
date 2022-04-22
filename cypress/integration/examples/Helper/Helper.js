@@ -16,6 +16,9 @@ class Helper {
             case "email":
                 this.homePagePom.getEmail().type(value);
                 break;
+            case "password":
+                this.homePagePom.getPassword().type(value);
+                break;
             default:
                 throw new Error("There is no such data");
         }
