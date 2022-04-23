@@ -107,4 +107,8 @@ describe('Home Page Test', () => {
         helper.inputText(Constants_1.default[0].homePagePassword.data, Constants_1.default[0].homePagePassword.name);
         homePagePom.getPassword().should("have.value", Constants_1.default[0].homePagePassword.name);
     });
+    it('Checkbox for password should be displayed when data added', () => {
+        homePagePom.getCheckBox().check();
+        homePagePom.getCheckBox().should("be.checked");
+    });
 });

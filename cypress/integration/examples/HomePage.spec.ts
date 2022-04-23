@@ -135,4 +135,9 @@ describe('Home Page Test', () => {
         helper.inputText(Constants[0].homePagePassword.data, Constants[0].homePagePassword.name)
         homePagePom.getPassword().should("have.value",Constants[0].homePagePassword.name)
     })
+
+    it('Checkbox for password should be displayed when data added', () => {
+        homePagePom.getCheckBox().check()
+        homePagePom.getCheckBox().should("be.checked")
+    })
  })
