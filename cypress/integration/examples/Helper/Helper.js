@@ -23,5 +23,11 @@ class Helper {
                 throw new Error("There is no such data");
         }
     }
+    dropDown(data, value) {
+        switch (data) {
+            case "gender":
+                this.homePagePom.getGender().select(value);
+        }
+    }
 }
 exports.default = Helper;

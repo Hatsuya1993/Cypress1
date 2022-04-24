@@ -111,4 +111,8 @@ describe('Home Page Test', () => {
         homePagePom.getCheckBox().check();
         homePagePom.getCheckBox().should("be.checked");
     });
+    it('Gender selects male should be male', () => {
+        helper.dropDown(Constants_1.default[0].gender.data, Constants_1.default[0].gender.male);
+        homePagePom.getGender().should("have.value", Constants_1.default[0].gender.male);
+    });
 });

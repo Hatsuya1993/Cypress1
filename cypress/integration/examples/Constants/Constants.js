@@ -13,6 +13,11 @@ const constants = [
         "homePagePassword": {
             "data": "password",
             "name": "test"
+        },
+        "gender": {
+            "data": "gender",
+            "male": "Male",
+            "female": "Female"
         }
     }
 ];
