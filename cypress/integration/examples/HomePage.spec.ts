@@ -150,4 +150,8 @@ describe('Home Page Test', () => {
         helper.dropDown(Constants[0].gender.data, Constants[0].gender.female)
         homePagePom.getGender().should("have.value", Constants[0].gender.female)
     })
+
+    it('Checkbox student should be checked if selected', () => {
+        homePagePom.getStudentCheckBox().check().should('be.checked')
+    })
  })

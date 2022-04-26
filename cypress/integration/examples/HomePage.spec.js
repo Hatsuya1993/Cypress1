@@ -119,4 +119,7 @@ describe('Home Page Test', () => {
         helper.dropDown(Constants_1.default[0].gender.data, Constants_1.default[0].gender.female);
         homePagePom.getGender().should("have.value", Constants_1.default[0].gender.female);
     });
+    it('Checkbox student should be checked if selected', () => {
+        homePagePom.getStudentCheckBox().check().should('be.checked');
+    });
 });
