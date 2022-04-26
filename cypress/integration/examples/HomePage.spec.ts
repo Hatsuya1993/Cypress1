@@ -151,6 +151,10 @@ describe('Home Page Test', () => {
         homePagePom.getGender().should("have.value", Constants[0].gender.female)
     })
 
+    it('Checkbox student should not be checked if not selected', () => {
+        homePagePom.getStudentCheckBox().should('not.be.checked')
+    })
+
     it('Checkbox student should be checked if selected', () => {
         homePagePom.getStudentCheckBox().check().should('be.checked')
     })
