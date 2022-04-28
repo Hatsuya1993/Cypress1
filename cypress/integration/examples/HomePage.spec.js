@@ -125,4 +125,7 @@ describe('Home Page Test', () => {
     it('Checkbox student should be checked if selected', () => {
         homePagePom.getStudentCheckBox().check().should('be.checked');
     });
+    it('Checkbox Employed should not be checked if not selected', () => {
+        homePagePom.getEmployedCheckBox().should('not.be.checked');
+    });
 });
