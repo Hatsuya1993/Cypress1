@@ -162,4 +162,8 @@ describe('Home Page Test', () => {
     it('Checkbox Employed should not be checked if not selected', () => {
         homePagePom.getEmployedCheckBox().should('not.be.checked')
     })
+
+    it('Checkbox Employed should be checked if selected', () => {
+        homePagePom.getEmployedCheckBox().check().should('be.checked')
+    })
  })
