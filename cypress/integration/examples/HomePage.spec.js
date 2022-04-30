@@ -131,4 +131,7 @@ describe('Home Page Test', () => {
     it('Checkbox Employed should be checked if selected', () => {
         homePagePom.getEmployedCheckBox().check().should('be.checked');
     });
+    it('Checkbox Employed should be not checked by default', () => {
+        homePagePom.getEntrepreneurCheckBox().should('be.disabled');
+    });
 });
