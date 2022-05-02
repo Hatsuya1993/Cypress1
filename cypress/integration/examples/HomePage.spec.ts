@@ -171,6 +171,10 @@ describe('Home Page Test', () => {
         homePagePom.getEntrepreneurCheckBox().should('be.disabled')
     })
 
+    it('Date of birth text should be displayed', () => {
+        homePagePom.getDateOfBirthText().should('be.visible')
+    })
+
     it('Date of birth should be empty by default', () => {
         homePagePom.getDateOfBirth().should('be.empty')
     })
