@@ -140,4 +140,9 @@ describe('Home Page Test', () => {
     it('Date of birth should be empty by default', () => {
         homePagePom.getDateOfBirth().should('be.empty');
     });
+    it('Date of birth should be populated based on the input passed', () => {
+        homePagePom.getDateOfBirth().click();
+        homePagePom.getDateOfBirth().type('2022-12-05');
+        homePagePom.getDateOfBirth().should('have.value', '2022-12-05');
+    });
 });
