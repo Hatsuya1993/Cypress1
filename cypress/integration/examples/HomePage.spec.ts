@@ -184,4 +184,8 @@ describe('Home Page Test', () => {
         homePagePom.getDateOfBirth().type('2022-12-05')
         homePagePom.getDateOfBirth().should('have.value','2022-12-05')
     })
+
+    it('Submit button should be enabled', () => {
+        homePagePom.getSubmitButton().should('be.enabled')
+    })
  })
