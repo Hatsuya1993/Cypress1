@@ -188,4 +188,8 @@ describe('Home Page Test', () => {
     it('Submit button should be enabled', () => {
         homePagePom.getSubmitButton().should('be.enabled')
     })
+
+    it('Two way binding input should be empty default', () => {
+        homePagePom.getTwoWayBinding().should('have.value', '')
+    })
  })
