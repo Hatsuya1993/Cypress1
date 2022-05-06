@@ -192,4 +192,10 @@ describe('Home Page Test', () => {
     it('Two way binding input should be empty default', () => {
         homePagePom.getTwoWayBinding().should('have.value', '')
     })
+
+    it('Two way binding should display data when given', () => {
+        homePagePom.getTwoWayBinding().click()
+        homePagePom.getTwoWayBinding().type('testing')
+        homePagePom.getTwoWayBinding().should('have.value','testing')
+    })
  })
