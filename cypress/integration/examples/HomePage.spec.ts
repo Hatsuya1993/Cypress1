@@ -198,4 +198,8 @@ describe('Home Page Test', () => {
         homePagePom.getTwoWayBinding().type('testing')
         homePagePom.getTwoWayBinding().should('have.value','testing')
     })
+
+    it('Bottom text should be displayed', () => {
+        homePagePom.getBottom().should('be.visible')
+    })
  })

@@ -55,6 +55,8 @@ class HomePagePOM{
         text: "Gender"
     }
 
+    private readonly bottomText : string = 'Copyright © ProtoCommerce 2018'
+
     private readonly gender : string = '#exampleFormControlSelect1'
 
     private readonly employmentStatus : string = '[for="exampleFormControlRadio1"]'
@@ -191,6 +193,10 @@ class HomePagePOM{
 
     getBanner() {
         return cy.get(this.bottom)
+    }
+
+    getBottom() {
+        return cy. contains(this.bottomText)
     }
 
 }

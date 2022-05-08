@@ -41,6 +41,7 @@ class HomePagePOM {
             class: "label",
             text: "Gender"
         };
+        this.bottomText = 'Copyright © ProtoCommerce 2018';
         this.gender = '#exampleFormControlSelect1';
         this.employmentStatus = '[for="exampleFormControlRadio1"]';
         this.studentCheckBox = '#inlineRadio1';
@@ -138,6 +139,9 @@ class HomePagePOM {
     }
     getBanner() {
         return cy.get(this.bottom);
+    }
+    getBottom() {
+        return cy.contains(this.bottomText);
     }
 }
 exports.default = HomePagePOM;
