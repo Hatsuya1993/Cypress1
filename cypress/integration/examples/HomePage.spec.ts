@@ -202,4 +202,8 @@ describe('Home Page Test', () => {
     it('Bottom text should be displayed', () => {
         homePagePom.getBottom().should('be.visible')
     })
+
+    it('Bottom text should be populated correctly', () => {
+        homePagePom.getBottom().should('have.text', 'Copyright © ProtoCommerce 2018')
+    })
  })
