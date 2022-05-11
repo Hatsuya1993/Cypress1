@@ -83,6 +83,8 @@ class HomePagePOM{
 
     private readonly bottom : string = '.m-0.text-center.text-white'
 
+    private readonly successMessage : string = '.alert.alert-success.alert-dismissible'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -196,7 +198,11 @@ class HomePagePOM{
     }
 
     getBottom() {
-        return cy. contains(this.bottomText)
+        return cy.contains(this.bottomText)
+    }
+
+    getSuccessMessage() {
+        return cy.get(this.successMessage)
     }
 
 }

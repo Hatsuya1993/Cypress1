@@ -55,6 +55,7 @@ class HomePagePOM {
         this.submitButton = '[type="submit"]';
         this.twoWayBinding = 'h4 input[name="name"]';
         this.bottom = '.m-0.text-center.text-white';
+        this.successMessage = '.alert.alert-success.alert-dismissible';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -142,6 +143,9 @@ class HomePagePOM {
     }
     getBottom() {
         return cy.contains(this.bottomText);
+    }
+    getSuccessMessage() {
+        return cy.get(this.successMessage);
     }
 }
 exports.default = HomePagePOM;

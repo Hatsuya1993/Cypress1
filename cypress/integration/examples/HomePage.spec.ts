@@ -206,4 +206,9 @@ describe('Home Page Test', () => {
     it('Bottom text should be populated correctly', () => {
         homePagePom.getBottom().should('have.text', 'Copyright © ProtoCommerce 2018')
     })
+
+    it('Success message should appear when the submit button is clicked', () => {
+        homePagePom.getSubmitButton().click()
+        homePagePom.getSuccessMessage().should('be.visible')
+    })
  })
