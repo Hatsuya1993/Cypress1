@@ -166,4 +166,8 @@ describe('Home Page Test', () => {
         homePagePom.getSubmitButton().click();
         homePagePom.getSuccessMessage().should('be.visible');
     });
+    it('Success message should appear correctly when the submit button is clicked', () => {
+        homePagePom.getSubmitButton().click();
+        homePagePom.getSuccessMessage().should('contain', 'Success! The Form has been submitted successfully!.');
+    });
 });
