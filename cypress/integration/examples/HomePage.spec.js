@@ -170,4 +170,10 @@ describe('Home Page Test', () => {
         homePagePom.getSubmitButton().click();
         homePagePom.getSuccessMessage().should('contain', 'Success! The Form has been submitted successfully!.');
     });
+    it('Success message should not be displayed when canceled', () => {
+        homePagePom.getSubmitButton().click();
+        homePagePom = new HomePagePOM_1.default();
+        homePagePom.getSuccessMessageCross().click();
+        homePagePom.getSuccessMessage().should('not.be.visible');
+    });
 });

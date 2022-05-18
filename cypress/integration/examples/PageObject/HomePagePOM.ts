@@ -85,6 +85,8 @@ class HomePagePOM{
 
     private readonly successMessage : string = '.alert.alert-success.alert-dismissible'
 
+    private readonly successMessageCross : string = '[data-dismiss="alert"]'
+
     navigateTo() {
         cy.visit(this.link)
     }
@@ -203,6 +205,10 @@ class HomePagePOM{
 
     getSuccessMessage() {
         return cy.get(this.successMessage)
+    }
+
+    getSuccessMessageCross() {
+        return cy.get(this.successMessageCross)
     }
 
 }

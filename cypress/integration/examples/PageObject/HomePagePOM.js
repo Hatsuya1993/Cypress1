@@ -56,6 +56,7 @@ class HomePagePOM {
         this.twoWayBinding = 'h4 input[name="name"]';
         this.bottom = '.m-0.text-center.text-white';
         this.successMessage = '.alert.alert-success.alert-dismissible';
+        this.successMessageCross = '[data-dismiss="alert"]';
     }
     navigateTo() {
         cy.visit(this.link);
@@ -146,6 +147,9 @@ class HomePagePOM {
     }
     getSuccessMessage() {
         return cy.get(this.successMessage);
+    }
+    getSuccessMessageCross() {
+        return cy.get(this.successMessageCross);
     }
 }
 exports.default = HomePagePOM;
